@@ -1,0 +1,70 @@
+/* Watch face styling */
+.watch-face {
+  position: relative;
+  background: radial-gradient(circle, #FF6B6B 0%, #FF8E8E 100%);
+  box-shadow: 
+    0 0 20px rgba(255, 107, 107, 0.8),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Clock hands styling */
+.hand {
+  position: absolute;
+  left: 50%;
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.3, 1);
+  border-radius: 9999px;
+}
+
+.hour {
+  width: 25%;
+  height: 8px;
+  background: white;
+  top: 50%;
+  transform: translate(-50%, -100%) rotate(var(--rotation));
+}
+
+.minute {
+  width: 33%;
+  height: 6px;
+  background: white;
+  top: 50%;
+  transform: translate(-50%, -100%) rotate(var(--rotation));
+}
+
+.second {
+  width: 40%;
+  height: 2px;
+  background: #EF4444;
+  top: 50%;
+  transform: translate(-50%, -100%) rotate(var(--rotation));
+  transition: none;
+}
+
+/* Sparkle animations */
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0.8; 
+    transform: scale(1) rotate(0deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2) rotate(10deg); 
+  }
+}
+
+.sparkle {
+  animation: sparkle 2s infinite;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
+}
+
+/* Digital time display */
+#digital-time {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Settings page specific styles */
+.option-card.selected {
+  border: 2px solid #8B5CF6;
+  background-color: #EDE9FE;
+}
