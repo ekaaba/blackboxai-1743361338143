@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
+  <style>
+    .option-card {
+      transition: all 0.3s ease;
+    }
+    .option-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="font-['Comic_Neue'] bg-gradient-to-b from-blue-400 to-purple-500 min-h-screen p-8">
+  <div class="max-w-md mx-auto bg-white bg-opacity-90 rounded-2xl p-6 shadow-xl">
+    <h1 class="text-3xl font-bold text-center mb-6 text-purple-700">Watch Settings</h1>
+    
+    <div class="space-y-6">
+      <!-- Theme Selector -->
+      <div>
+        <h2 class="text-xl font-semibold mb-3 text-purple-600">Theme</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="option-card bg-blue-100 p-4 rounded-xl cursor-pointer border-2 border-blue-300">
+            <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-gradient-to-br from-blue-400 to-blue-600"></div>
+            <p class="text-center">Day Mode</p>
+          </div>
+          <div class="option-card bg-purple-100 p-4 rounded-xl cursor-pointer">
+            <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-gradient-to-br from-purple-700 to-gray-900"></div>
+            <p class="text-center">Night Mode</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Character Selector -->
+      <div>
+        <h2 class="text-xl font-semibold mb-3 text-purple-600">Character</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="option-card bg-pink-100 p-4 rounded-xl cursor-pointer">
+            <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg" 
+                 class="w-16 h-16 mx-auto mb-2 rounded-full object-cover">
+            <p class="text-center">Cat</p>
+          </div>
+          <div class="option-card bg-yellow-100 p-4 rounded-xl cursor-pointer">
+            <img src="https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg" 
+                 class="w-16 h-16 mx-auto mb-2 rounded-full object-cover">
+            <p class="text-center">Dog</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animation Speed -->
+      <div>
+        <h2 class="text-xl font-semibold mb-3 text-purple-600">Animation Speed</h2>
+        <input type="range" min="1" max="5" value="3" 
+               class="w-full h-2 bg-purple-200 rounded-lg appearance-none cursor-pointer">
+        <div class="flex justify-between text-sm text-purple-600 mt-1">
+          <span>Slow</span>
+          <span>Fast</span>
+        </div>
+      </div>
+
+      <!-- Save Button -->
+      <button onclick="window.location.href='index.html'"
+              class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl transition-colors">
+        Save Settings
+      </button>
+    </div>
+  </div>
+</body>
+</html>
